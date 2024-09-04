@@ -1,4 +1,4 @@
-# Mining Ore on Windows 10/11 Unsing CLI
+# Mining Ore on Ubuntu 22-24 Using CLI
 
 
  All credits to @HardfHatChad for building Ore and the Ore-CLI

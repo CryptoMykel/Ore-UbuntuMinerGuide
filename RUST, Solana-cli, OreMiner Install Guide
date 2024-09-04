@@ -35,9 +35,10 @@ $ curl https://sh.rustup.rs -sSf | sh
 - close or refresh terminal
 
 
-# 1.5. "may not have to do"
+# 1.5. "may not have to do" Do anyways for 0 failers
 
-
+$ sudo apt-get install openssl pkg-config libssl-dev
+- close the terminal
 
 
 # 2. Install Solana CLI (if already done skip to #5)
@@ -54,7 +55,7 @@ $ solana --version
 $ solana-keygen new
 
 - save the Recovery phrase and password
-- goto your keypair folder it told you "C:\Users\ "keypair location"\.config\solana\id.json"
+- goto your keypair folder it told you "home/YOUR_USER/.config/solana/id.json"
 - open and copy the id.json " import that into phantom wallet for easy tracking"
 
 
@@ -80,23 +81,9 @@ $ Solana address
 
 # 7. Start Mining Ore
 
-- create a text file and enter this
-
-  @echo off
+  ore --rpc "your free or paid RPC" --keypair home/YOUR_USER/.config/solana/id.json --priority-fee 10000 mine --cores " your PC core count, run one less for better stability"
   
-  :loop
-  
-  echo start mining ore...
-  
-  ore --rpc "your free or paid RPC" --keypair C:\Users\ "keypair location"\.config\solana\id.json --priority-fee 8000000 mine --cores " your PC core count"
-  
-  goto loop
-
 - change the keypair location to your that you saved from step 5
-- click save as
-- name the file "OreMiner.bat"
-- save to desktop or anywhere you like
-- right click the file "run as admin"
 
 
 # Helpful Commands
@@ -109,7 +96,7 @@ $ ore --keypair C:\Users\ "keypair location"\.config\solana\id.json balance
 
 Claim ORE Rewards:  
 - you can run this a a batch but watch closly for a claim so you can stop the batch  
-$ ore --rpc "your free or paid RPC" --keypair C:\Users\ "keypair location"\.config\solana\id.json --priority-fee 7000000 claim
+$ ore --rpc "your free or paid RPC" --keypair C:\Users\ "keypair location"\.config\solana\id.json --priority-fee 5000 claim
 
 Check SOL Balance:   
 $ solana balance
